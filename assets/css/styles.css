@@ -762,6 +762,12 @@ ul.custom-list-style li {
   background: #6091ba;
   margin-bottom: 30px;
 }
+.main-nav.sticky{
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+}
 .main-nav button {
   background: #27435a;
   color: #fff !important;
@@ -1438,7 +1444,7 @@ ul.custom-list-style li {
   background: #6f7a9f;
 }
 .config-panel li.red a {
-  background: #a85770;
+  background: #d22121;
 }
 .config-panel .close {
   position: absolute;
