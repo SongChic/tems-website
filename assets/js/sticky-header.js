@@ -15,10 +15,5 @@ $.fn.sticktHeader = function (option) {
             $target.removeClass("sticky");
             $parent.find(".empty").remove();
         }
-        console.log("a");
     });
-
-    function addEmpty() {
-
-    }
 };
