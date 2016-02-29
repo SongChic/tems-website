@@ -1,0 +1,10 @@
+.main-nav.sticky{
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+}
+.empty {
+  height: 50px;
+  margin-bottom: 30px;
+}
