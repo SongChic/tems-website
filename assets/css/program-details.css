@@ -1,0 +1,103 @@
+.step-wrap {
+	display: table;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	border: 2px solid #dfdfdf;
+}
+.step-wrap:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+.step-wrap li {
+	position: relative;
+	display: table-cell;
+	padding: 10px 0;
+	width: 20%;
+	height: 80px;
+	border-left: 1px solid #dfdfdf;
+	list-style: none;
+	text-align: center;
+	vertical-align: middle;
+}
+.step-wrap li:first-child{
+	border: none;
+}
+.step-wrap li tt{
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.step-wrap .arrow-wrap {
+	overflow: hidden;
+	position: absolute;
+	z-index: 100;
+	width: 20px;
+	height: 20px;
+	top: 30px;
+	right: -10px;
+	background: #fff;
+	font-size: 15px;
+	text-align: center;
+	line-height: 17px;
+	border: 1px solid #bdbdbd;
+	border-radius: 30px;
+}
+.step-wrap .arrow-wrap .fa{
+	margin: 0;
+	margin-left: 3px;
+	margin-top: -3px;
+}
+
+.middle-table .table > tbody > tr > td {
+	vertical-align: middle;
+}
+
+.fees-table .table > thead > tr > th {
+	background: #444444;
+	color: #fff;
+	border-bottom: 1px solid #38373d;
+}
+.fees-table .table > tbody > tr > td{
+	border-bottom: 1px solid #dedede;
+}
+
+.last{
+	margin-bottom: 15px;
+}
+
+.admission-info dt{
+	display: inline-block;
+	margin-bottom: 15px;
+	padding: 5px 10px;
+	background: #444444;
+	/*background: #d22121;*/
+	color: #fff;
+}
+
+.testimonials em {
+	display: block;
+	margin-top: 10px;
+}
+.testimonials h5{
+	padding: 5px;
+	background: #444444;
+	color: #fff
+}
+
+
+/* 미디어 쿼리 */
+@media (max-width: 640px) and (min-width: 0px) {
+	.step-wrap li{
+		display: block;
+		width:100%;
+		height: auto;
+		border-top: 1px solid #dfdfdf;
+	}
+	.step-wrap .arrow-wrap{
+		left: 0;
+		right: 0;
+		bottom: -10px;
+		margin: 0 auto;
+	}
+}
