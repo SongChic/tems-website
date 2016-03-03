@@ -1,9 +1,42 @@
-ul b{
-	color: #60A823;
+.img-responsive-wrap {
+    padding:0 15px;
+    margin-bottom: 15px;
+}
+.img-responsive-wrap .col-md-6,
+.img-responsive-wrap .col-xs-6,
+.img-responsive-wrap .row {
+    margin: 0;
+    padding: 0;
 }
 .camp-info{
 	padding: 0;
+    counter-reset: li;
 }
 .camp-info > li{
+    position: relative;
 	list-style: none;
+}
+.camp-info > li h5{
+    display: inline-block;
+    padding: 5px 10px;
+    background: #444444;
+    color: #fff;
+    font-size: 13px !important;
+    font-weight: bold !important;
+}
+.camp-info > li > ul {
+    margin: 0;
+    padding: 0 0 0 20px;
+}
+.camp-info > li > ul > li {
+    list-style: none;
+}
+.camp-info > li > ul > li::before{
+    content: "- ";
+}
+.video-wrap .video .video-iframe {
+  max-width: 100%;
+  width: 100%;
+  height: 287px;
+  margin-bottom: 5px;
 }

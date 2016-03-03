@@ -6,6 +6,8 @@ $.fn.sticktHeader = function (option) {
         state = false;
 
     $(window).on("scroll", function(event) {
+        console.log(event.type);
+
         if ($(this).scrollTop() > targetOffset) {
             if ($parent.find(".empty").length == 0) {
                 $target.before("<div class='empty'>")
