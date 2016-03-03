@@ -1,0 +1,9 @@
+ul b{
+	color: #60A823;
+}
+.camp-info{
+	padding: 0;
+}
+.camp-info > li{
+	list-style: none;
+}
