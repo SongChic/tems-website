@@ -8,3 +8,13 @@
   height: 50px;
   margin-bottom: 30px;
 }
+
+.hyphens-list{
+    padding: 0;
+}
+.hyphens-list li{
+    list-style: none;
+}
+.hyphens-list li::before{
+    content: "- "
+}

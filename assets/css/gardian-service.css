@@ -1,0 +1,9 @@
+.gardian-service-info ul{
+    padding: 0;
+}
+.gardian-service-info li{
+    list-style: none;
+}
+.gardian-service-info li::before{
+    content: "- ";
+}
