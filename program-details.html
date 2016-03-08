@@ -102,9 +102,9 @@
                                 <li class="dropdown-submenu">
                                     <a class="trigger" tabindex="-1" href="#">Program Details <i class="fa fa-angle-right"></i></a>
                                     <ul class="dropdown-menu">
-                                        <li><a tabindex="-1" href="program-details.html">IEB-UTP</a></li>
-                                        <li><a href="program-details.html">UTP1</a></li>
-                                        <li><a href="program-details.html">UTP2</a></li>
+                                        <li><a tabindex="-1" href="program-details.html#IEB-UTP">IEB-UTP</a></li>
+                                        <li><a href="program-details.html#UTP1">UTP1</a></li>
+                                        <li><a href="program-details.html#UTP2">UTP2</a></li>
                                     </ul>
                                 </li> 
                                 <li><a href="tems-assessment-test.html">TEMS Assessment Test</a></li>
@@ -118,9 +118,9 @@
                                 <li class="dropdown-submenu">
                                     <a class="trigger" tabindex="-1" href="#">Tutoring <i class="fa fa-angle-right"></i></a>
                                     <ul class="dropdown-menu">
-                                        <li><a tabindex="-1" href="tutoring.html">Elementary</a></li>
-                                        <li><a href="tutoring.html">High School</a></li>
-                                        <li><a href="tutoring.html">Adult</a></li>
+                                        <li><a tabindex="-1" href="tutoring.html#Elementary">Elementary</a></li>
+                                        <li><a href="tutoring.html#HighSchool">High School</a></li>
+                                        <li><a href="tutoring.html#Adult">Adult</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown-submenu">
@@ -193,9 +193,11 @@
                                   <h3 class="title">
                                     What is TEMS UTP?
                                   </h3>
-
-                                  <p>Your Pathway to Canada’s Best Schools. TEMS UTP is a two year, guaranteed pathway into top Canadian universities with selected undergraduate programs in Computing Science, Mathematics, Business, Economics, Social Sciences, and other General Sciences. TEMS UTP prepares students to attend a leading postsecondary school that will get them noticed in their future career. The program consists of three subprograms: IEB-UTP, UTP1 and UTP2.
-                                  </p>
+                                  
+                                  <div class="well">
+                                    <p>Your Pathway to Canada’s Best Schools. TEMS UTP is a two year, guaranteed pathway into top Canadian universities with selected undergraduate programs in Computing Science, Mathematics, Business, Economics, Social Sciences, and other General Sciences. TEMS UTP prepares students to attend a leading postsecondary school that will get them noticed in their future career. The program consists of three subprograms: IEB-UTP, UTP1 and UTP2.
+                                    </p>
+                                  </div>
                                 </div><!--//page-row-->
 
                                 <div class="page-row">
@@ -238,7 +240,7 @@
 
                                 <div class="tabbed-info page-row">
                                     <ul class="nav nav-tabs">
-                                      <li class="active"><a href="#tab1" data-toggle="tab">IEB-UTP</a></li>
+                                      <li><a href="#tab1" data-toggle="tab">IEB-UTP</a></li>
                                       <li><a href="#tab2" data-toggle="tab">UTP1</a></li>
                                       <li><a href="#tab3" data-toggle="tab">UTP2</a></li>
                                     </ul>
@@ -505,7 +507,50 @@
 
     <script type="text/javascript">
         $(".main-nav").sticktHeader();
+        
+        //초기 변수 선언
+        var hashDiv = document.location.hash.substring(1,document.location.hash.length),
+            locationArr = [
+                "IEB-UTP",
+                "UTP1",
+                "UTP2"
+            ],
+            $target = $(".tabbed-info ul li"),
+            $tabContent = $(".tab-content .tab-pane");
+        
+        //탭 클릭 이벤트
+        $target.on("click", function(event){
+            tabController($(this).index());
+        });
+        
+        //탭 컨트롤 함수
+        function tabController (index) {
+            $target
+            .not(index).removeClass("active")
+            .eq(index).addClass("active");
+                                    
+            $tabContent
+            .not(index).removeClass("active")
+            .eq(index).addClass("active");
+        }
+        
+        //해쉬 체인지 이벤트 (같은 페이지 내에서 메뉴만 바뀔경우)
+        window.onhashchange = function (event) {
+            hashDiv = document.location.hash.substring(1,document.location.hash.length);
+            if (locationArr.indexOf(hashDiv) > -1) {
+                tabController(locationArr.indexOf(hashDiv));
+            }
+        };
+        
+        //초기 탭 컨트롤
+        if (locationArr.indexOf(hashDiv) > -1) {
+            tabController(locationArr.indexOf(hashDiv));
+        } else {
+            tabController(0);
+        }
+        
+        
     </script>
-
+    
 </body>
 </html>

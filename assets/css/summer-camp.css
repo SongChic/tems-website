@@ -18,9 +18,9 @@
 }
 .camp-info > li h5{
     display: inline-block;
-    padding: 5px 10px;
-    background: #444444;
-    color: #fff;
+    /*padding: 5px 10px;*/
+    /*background: #444444;
+    color: #fff;*/
     font-size: 13px !important;
     font-weight: bold !important;
 }
