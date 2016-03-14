@@ -18,3 +18,16 @@
 .hyphens-list li::before{
     content: "- "
 }
+
+.caption-main {
+    display: inline-block;
+    background: #d22121;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.text-justify {
+  text-align: justify;
+}
