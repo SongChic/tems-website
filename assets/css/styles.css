@@ -791,6 +791,9 @@ ul.custom-list-style li {
 .main-nav .nav .nav-item.dropdown {
   z-index: 101;
 }
+.main-nav .nav .nav-item.dropdown.open {
+    z-index: 102;
+}
 .main-nav .nav .nav-item a {
   color: #e5cdd4;
   -webkit-transition: all 0.4s ease-in-out;
