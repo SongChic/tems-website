@@ -35,3 +35,11 @@
 #promo-slider {
   margin-bottom: 30px;
 }
+
+.caption-main a {
+  color: white;
+}
+
+.caption-main a:hover {
+  color: yellow;
+}
