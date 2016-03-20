@@ -280,6 +280,15 @@
 
                                 <div class="page-row">
                                     <h3 class="title">
+                                        Gallery
+                                    </h3>
+                                    <div id="gallery">
+                                      <div class="box"><img src=""></div>
+                                    </div>
+                                </div>
+
+                                <div class="page-row">
+                                    <h3 class="title">
                                         3-weeks Schedule <small>(July 23rd – Aug. 13th 2016)</small>
                                     </h3>
                                     <div class="page-row">
@@ -408,6 +417,11 @@
 
     <script type="text/javascript">
         $(".main-nav").sticktHeader();
+
+        $('#gallery').nested({
+          selector: '.box',
+          resizeToFit: true
+        });
     </script>
 
 </body>

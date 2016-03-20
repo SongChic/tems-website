@@ -182,7 +182,7 @@
                     <div class="row page-row">
                         <div class="course-wrapper col-md-8 col-sm-7">
                             <article class="course-item">
-                                <p class="featured-image page-row"><img class="img-responsive" src="assets/images/news/news-1.jpg" alt=""/></p>
+                                <p class="featured-image page-row"><img id="main-image" class="img-responsive" src="assets/images/high-school-elementary.jpg" alt=""/></p>
 
                                 <div class="tabbed-info page-row">
                                     <ul class="nav nav-tabs">
@@ -363,8 +363,14 @@
                 "HighSchool",
                 "Adult"
             ],
+            imageSrc = [
+                "assets/images/high-school-elementary.jpg",
+                "assets/images/high-school-hs.jpg",
+                "assets/images/high-school-adult.jpg"
+            ],
             $target = $(".tabbed-info ul li"),
-            $tabContent = $(".tab-content .tab-pane");
+            $tabContent = $(".tab-content .tab-pane"),
+            $mainImage = $("#main-image");
 
         //탭 클릭 이벤트
         $target.on("click", function(event){
@@ -380,6 +386,8 @@
             $tabContent
             .not(index).removeClass("active")
             .eq(index).addClass("active");
+
+            $mainImage.attr("src", imageSrc[index]);
         }
 
         //해쉬 체인지 이벤트 (같은 페이지 내에서 메뉴만 바뀔경우)
