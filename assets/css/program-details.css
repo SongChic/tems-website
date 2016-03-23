@@ -84,8 +84,17 @@
 	background: #444444;
 	color: #fff
 }
-
-
+/*.testimonials .panel-heading,*/
+.admission-info .panel-heading {
+    background: #d73838;
+    color: #fff;
+}
+.panel>.list-group:last-child .list-group-item:last-child, .panel>.panel-collapse>.list-group:last-child .list-group-item:last-child {
+    border-bottom-width: 1px;
+}
+.success-info i {
+    color: #d73838;
+}
 /* 미디어 쿼리 */
 @media (max-width: 640px) and (min-width: 0px) {
 	.step-wrap li{
